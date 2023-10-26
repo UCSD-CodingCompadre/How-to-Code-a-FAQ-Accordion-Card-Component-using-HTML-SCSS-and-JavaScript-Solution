@@ -1,0 +1,240 @@
+$textDarkBlue: hsl(238, 29%, 16%);
+$textRed: hsl(14, 88%, 65%);
+$gradienViolet: hsl(273, 75%, 66%);
+$gradientBlue: hsl(240, 73%, 65%);
+$textDarkGrayBlue: hsl(237, 12%, 33%);
+$textGrayBlue: hsl(240, 6%, 50%);
+$dividerColor: hsl(240, 5%, 91%);
+$fontSize: 12px;
+$fontWeight1: 400;
+$fontWeight2: 700;
+$fontFamily: 'Kumbh Sans', sans-serif;
+
+
+*
+{
+
+    // Set the default style settings for all elements
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+
+    // Create a flexbox for the page
+    align-items: center;
+    background-image: linear-gradient($gradienViolet, $gradientBlue);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    .card
+    {
+
+        // Set the card style
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: -100px;
+        padding: 25px;
+        width: 350px;
+        .section-1
+        {
+            .women-mobile
+            {
+
+                // Set the dimensions of the image
+                height: 300px;
+                margin-top: -200px;
+                width: 300px;
+            }
+            .pattern-mobile
+            {
+
+                // Set the dimensions of the image
+                margin-top: -200px;
+                width: 300px;
+            }
+        }
+        .section-2
+        {
+            .heading
+            {
+
+                // Set the style of the heading
+                color: $textDarkBlue;
+                font-size: 18px;
+                font-weight: $fontWeight2;
+                margin-top: 25px;
+                text-align: center;
+            }
+            .accordion
+            {
+                .accordion-item
+                {
+                    padding-top: 10px;
+                    .flex-container-1
+                    {
+
+                        // Create a flexbox for the accordion question section
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 10px;
+                        .accordion-heading
+                        {
+
+                            // Set the style for the text
+                            color: $textDarkGrayBlue;
+                            font-size: $fontSize;
+                            &:hover
+                            {
+
+                                // Set the style for the hover action
+                                color: $textRed;
+                            }
+                        }
+                        .accordion-heading-active
+                        {
+
+                            // Set the style for the active heading
+                            color: $textDarkBlue;
+                            font-weight: $fontWeight2;
+                        }
+                        img
+                        {
+
+                            // Set the image deafult styling
+                            cursor: pointer;
+                            transition-duration: 250ms;
+                        }
+                        .arrow
+                        {
+
+                            // Set the transform style for the image
+                            transform: rotate(0);
+                        }
+                        .arrow-active
+                        {
+
+                            // Set the transform style for the image
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .question-text
+                    {
+
+                        // Set the style for the question text
+                        display: none;
+                        color: $textGrayBlue;
+                        padding-bottom: 10px;
+                    }
+                    .divider
+                    {
+
+                        // Set the style for the divider
+                        border-top: 1px solid $dividerColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cube-desktop
+{
+
+    // Hide the cube image
+    display: none;
+}
+
+.women-desktop
+{
+
+    // Hide the women image
+    display: none;
+}
+
+.pattern-desktop
+{
+
+    // Hide the pattern image
+    display: none;
+}
+
+@media (min-width: 1024px) 
+{
+    body
+    {
+        .card
+        {
+
+            // Set up the grid for the card
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 800px;
+            .section-1
+            {
+                .women-mobile
+                {
+
+                    // Hide the mobile image
+                    display: none;
+                }
+                .pattern-mobile
+                {
+
+                    // Hide the mobile image
+                    display: none;
+                }
+            }
+            .section-2
+            {
+                .heading
+                {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    .cube-desktop
+    {
+
+        // Set the position and dimensions for the cube
+        display: block;
+        height: 200px;
+        margin-left: -800px;
+        margin-top: 150px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    .women-desktop
+    {
+
+        // Set the position and dimensions for the women
+        display: block;
+        height: 300px;
+        margin-left: -550px;
+        margin-top: 50px;
+        position: absolute;
+        width: 400px;
+        z-index: 1;
+    }
+
+    .pattern-desktop
+    {
+
+        // Set the position and dimensions for the pattern
+        display: block;
+        margin-left: -550px;
+        margin-top: 50px;
+        position: absolute;
+        width: 400px;
+    }
+}

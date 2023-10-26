@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  
+
+  <!-- Hold the desktop cube image -->
+  <img 
+  alt="cube-desktop"
+  class="cube-desktop"
+  src="./images/illustration-box-desktop.svg" 
+  >
+
+  <!-- Hold the desktop women image -->
+  <img 
+  alt="women-desktop"
+  class="women-desktop"
+  src="./images/illustration-woman-online-desktop.svg" 
+  >
+
+  <!-- Hold the desktop background pattern image -->
+  <img 
+  alt="pattern-desktop"
+  class="pattern-desktop"
+  src="./images/bg-pattern-desktop.svg" 
+  >
+
+  <!-- Hold the container for the card -->
+  <div 
+  class="card"
+  >
+
+    <!-- Hold the first section of the card -->
+    <div 
+    class="section-1"
+    >
+
+      <!-- Hold the mobile women image -->
+      <img 
+      alt="women-mobile"
+      class="women-mobile"
+      src="./images/illustration-woman-online-mobile.svg" 
+      >
+
+      <!-- Hold the mobile background pattern image -->
+      <img 
+      alt="pattern-mobile"
+      class="pattern-mobile"
+      src="./images/bg-pattern-mobile.svg" 
+      >
+    </div>
+
+    <!-- Hold the second section of the card -->
+    <div 
+    class="section-2"
+    >
+
+      <!-- Hold the heading -->
+      <p 
+      class="heading"
+      >
+        FAQ
+      </p>
+
+      <!-- Hold the accordion container -->
+      <div 
+      class="accordion"
+      >
+
+        <!-- Hold the accordion item -->
+        <div 
+        class="accordion-item"
+        id="1"
+        >
+
+          <!-- Hold the flex container for the heading and arrow -->
+          <div 
+          class="flex-container-1"
+          >
+
+            <!-- Hold the item heading -->
+            <p 
+            class="accordion-heading"
+            >
+              How many team members can I invite?
+            </p>
+
+            <!-- Hold the arrow -->
+            <img 
+            alt="arrow"
+            class="arrow"
+            onclick="handleAccordionItem('1')"
+            src="./images/icon-arrow-down.svg" 
+            >
+          </div>
+
+          <!-- Hold the question text -->
+          <div 
+          class="question-text"
+          >
+            You can invite up to 2 additional users on the Free plan. There is no limit on 
+            team members for the Premium plan.
+          </div>
+
+          <!-- Hold the item divider -->
+          <hr
+          class="divider"
+          >
+        </div>
+
+        <!-- Hold the accordion item -->
+        <div 
+        class="accordion-item"
+        id="2"
+        >
+
+          <!-- Hold the flex container for the heading and arrow -->
+          <div 
+          class="flex-container-1"
+          >
+
+            <!-- Hold the item heading -->
+            <p 
+            class="accordion-heading"
+            >
+              What is the maximum file upload size?
+            </p>
+
+            <!-- Hold the arrow -->
+            <img 
+            alt="arrow"
+            class="arrow"
+            onclick="handleAccordionItem('2')"
+            src="./images/icon-arrow-down.svg" 
+            >
+          </div>
+
+          <!-- Hold the question text -->
+          <div 
+          class="question-text"
+          >
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </div>
+
+          <!-- Hold the item divider -->
+          <hr
+          class="divider"
+          >
+        </div>
+
+        <!-- Hold the accordion item -->
+        <div 
+        class="accordion-item"
+        id="3"
+        >
+
+          <!-- Hold the flex container for the heading and arrow -->
+          <div 
+          class="flex-container-1"
+          >
+
+            <!-- Hold the item heading -->
+            <p 
+            class="accordion-heading"
+            >
+              How do I reset my password?
+            </p>
+
+            <!-- Hold the arrow -->
+            <img 
+            alt="arrow"
+            class="arrow"
+            onclick="handleAccordionItem('3')"
+            src="./images/icon-arrow-down.svg" 
+            >
+          </div>
+
+          <!-- Hold the question text -->
+          <div 
+          class="question-text"
+          >
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </div>
+
+          <!-- Hold the item divider -->
+          <hr
+          class="divider"
+          >
+        </div>
+
+        <!-- Hold the accordion item -->
+        <div 
+        class="accordion-item"
+        id="4"
+        >
+
+          <!-- Hold the flex container for the heading and arrow -->
+          <div 
+          class="flex-container-1"
+          >
+
+            <!-- Hold the item heading -->
+            <p 
+            class="accordion-heading"
+            >
+              Can I cancel my subscription?
+            </p>
+
+            <!-- Hold the arrow -->
+            <img 
+            alt="arrow"
+            class="arrow"
+            onclick="handleAccordionItem('4')"
+            src="./images/icon-arrow-down.svg" 
+            >
+          </div>
+
+          <!-- Hold the question text -->
+          <div 
+          class="question-text"
+          >
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </div>
+
+          <!-- Hold the item divider -->
+          <hr
+          class="divider"
+          >
+        </div>
+
+        <!-- Hold the accordion item -->
+        <div 
+        class="accordion-item"
+        id="5"
+        >
+
+          <!-- Hold the flex container for the heading and arrow -->
+          <div 
+          class="flex-container-1"
+          >
+
+            <!-- Hold the item heading -->
+            <p 
+            class="accordion-heading"
+            >
+              Do you provide additional support?
+            </p>
+
+            <!-- Hold the arrow -->
+            <img 
+            alt="arrow"
+            class="arrow"
+            onclick="handleAccordionItem('5')"
+            src="./images/icon-arrow-down.svg" 
+            >
+          </div>
+
+          <!-- Hold the question text -->
+          <div 
+          class="question-text"
+          >
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </div>
+
+          <!-- Hold the item divider -->
+          <hr
+          class="divider"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./utilities/main.js"></script>
+</body>
+</html>
